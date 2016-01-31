@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Introducción</title>
+
+    <meta name="description" content="Introducción a los sistemas unixº">
+    <meta name="author" content="JuanCrg90">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Introducción a Unix</h1>
+          <p>
+          <small>Por <a href="http://juancrg90.me">Juan Carlos Ruiz</a> / <a href="http://twitter.com/JuanCrg90">@JuanCrg90</a></small>
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>¿Qué es un sistema operativo?</h2>
+            <p>
+            Un Sistema Operativo (OS Por sus siglas en inglés) es un programa el cual se encarga de manejar el hardware y software de una computadora proporcionando servicios comunes para los programas informáticos.
+            </p>
+          </section>
+          <section>
+            <p>
+            </p>
+            <figure>
+              <img data-src="/images/linux-vs-mac-vs-windows.jpg" alt="Down arrow">
+              <figcaption>Fig1.2 - Sistemas Operativos Modernos</figcaption>
+            </figure>
+          </section>
+          <section>
+            <h3>Tarea 1.1</h3>
+            <p>Investigar que tipos de sistemas operativos existen.</p>
+            <p>Fecha de entrega 8 de Febrero de 2016.</p>
+          </section>
+        </section>
+
+
+          <section>
+            <h2>¿Qué es Unix?</h2>
+            <p>Unix es un sistema operativo portable,
+            multitarea y multiusuario; desarrollado, en
+            principio, en 1969, por un grupo de empleados
+            de los laboratorios Bell de AT&T, entre los que
+            figuran Ken Thompson, Dennis Ritchie y
+            Douglas McIlroy.</p>
+          </section>
+
+
+        <section>
+          <section>
+            <h2>¿Qué es Linux?</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Kernel monolítico creado por Linus Torvalds
+                y muchos contribuyentes desde 1991.</li>
+              <li class="fragment">Inició como un experimento, basado en
+                Minix OS.</li>
+              <li class="fragment">Contiene Software, BSD, System V y de
+                terceros.</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Sigue la filosofía UNIX.</li>
+              <li class="fragment"><a href="https://github.com/torvalds/linux" target="_blank">Código Fuente disponible de forma libre</a>.</li>
+              <li class="fragment">La mayoría de las distribuciones son
+                gratuitas.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Cumple con estándares tanto de la industria como propios.</h3>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Posix, ANSI C, IEEE, ANSI, W3C.</li>
+              <li class="fragment"> IETF RFCs (Correo-e, Web, DNS,
+                Enrutamiento). </li>
+              <li class="fragment">FHS, LSB, freestandars.org.</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">CORBA, SQL</li>
+              <li class="fragment"> Emblix (Embedded Linux - Japan), CELF,
+                DataCentre Linux.</li>
+              <li class="fragment">LI18N - Internationalisaion.</li>
+            </ul>
+          </section>
+
+          <section>
+            <figure>
+              <img src="https://avatars3.githubusercontent.com/u/1024025?v=3&s=400" alt="Linus Torvalds">
+              <figcaption>Fig1.2.- Linus Torvalds</figcaption>
+            </figure>
+            </figure>
+          </section>
+
+          <section>
+            <a href="http://www.linux-netbook.com/linux/timeline/" target="_blank">Linux Timeline</a>
+          
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>Filosofía Unix</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Hacer las cosas bien y a la primera.</li>
+              <li class="fragment">Estricta separación entre los modos de usuario y de kernel.</li>
+              <li class="fragment">Que los programas acepten entrada desde stdin, y escriban su resultado en stdout y stderr</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Que los programas trabajen en armonía con
+              otros y que se manejen flujos de texto, pues
+              es una interfaz universal.</li>
+              <li class="fragment">Crear programas, rápidos, simples y con la
+              mínima intervención por parte del usuario.</li>
+            </ul>
+
+          </section>
+
+          <section>
+            <h3>Tarea 1.2</h3>
+            <p>Investigar las reglas Unix segun Eric Ryamond's.</p>
+            <p>Fecha de entrega 8 de Febrero de 2016.</p>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>¿Qué es una distribución Linux?</h2>
+          </section>
+
+          <section>
+            <p>Una distribución Linux (coloquialmente
+            llamada distro) es una distribución de software
+            basada en el núcleo Linux que incluye
+            determinados paquetes de software para
+            satisfacer las necesidades de un grupo
+            específico de usuarios, dando así origen a
+            ediciones domésticas, empresariales y para
+            servidores.</p>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h3>¿En qué difieren?</h3>
+
+            <p>Por lo general sus diferencias radican en el tipo
+            de paquetes de software que utilizan, soporte,
+            precio, arquitecturas soportadas, usuario,
+            objetivo, etc.</p>
+          </section>
+
+        </section>
+
+        <section>
+          <figure>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Unix_history-simple.svg/1024px-Unix_history-simple.svg.png" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Unix_history-simple.svg/1024px-Unix_history-simple.svg.png" alt=""></a>
+          <figcaption>Fig1.3.- Ramificación del sistema Unix</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <figure>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/5/58/Linux_Distribution_Timeline_with_Android.svg" target="_blank"><img src="/images/timeline.png" alt=""></a>
+          <figcaption>Fig1.4.- Distribuciones Linux</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <p>Linux, al ser Derivado de Minix OS, lo es también de los UNIX, cuyas principales ramas son system V y BSD.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>System V</th>
+                <th>BSD</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>Oracle Solaris</td>
+              <td>Mac OS X</td>
+            </tr>
+            <tr>
+              <td>HP-UX</td>
+              <td>Linux</td>
+            </tr>
+            <tr>
+              <td>IBM AIX</td>
+              <td>Android</td>
+            </tr>
+            <tr>
+              <td>SGI Irix</td>
+              <td>Free BSD</td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <section>
+            <h2>¿Dónde se usa Linux?</h2>
+          </section>
+
+          <section>
+            <figure>
+            <img src="/images/linux_runs_supercomputers.jpg" alt="super computer">
+            <figcaption>Fig1.5.- <a href="http://www.zdnet.com/article/linux-still-rules-supercomputing/" target="_blank">Super computadoras</a></figcaption>
+            </figure>                      
+          </section>
+
+          <section>
+            <figure>
+            <img src="/images/Large_Hadron_Collider.jpg" alt="Large Hadron Collider">
+            <figcaption>Fig1.6.- <a href="https://www.linux.com/news/enterprise/networking/873403-using-open-source-to-distribute-big-data-from-the-large-hadron-collider" target="_blank">El Gran Colisionador de Hadrones</a> </figcaption>
+            </figure>                      
+          </section>
+
+          <section>
+            <figure>
+            <img src="/images/linux_runs_atc.jpg" alt="Trafic Control systems">
+            <figcaption>Fig1.7.- <a href="http://www.linuxtoday.com/it_management/2011070800741NWEM" target="_blank">El sistema de luces de tráfico de la ciudad de San Francisco</a>  </figcaption>
+            </figure>                      
+          </section>
+
+          <section>
+            <figure>
+            <img src="/images/rpi.png" alt="Raspberry Pi">
+            <figcaption>Fig1.8.- <a href="https://www.raspberrypi.org/" target="_blank">Sistemas Embebidos</a>  </figcaption>
+            </figure>                      
+          </section>
+
+          <section>
+            <figure>
+            <img src="/images/wireless-routers.jpg" alt="wireless routers">
+            <figcaption>Fig1.9.- Routers inalambricos  </figcaption>
+            </figure>                      
+          </section>
+
+
+          <section>
+            <figure>
+            <img src="/images/ps3.jpg" alt="Play Station 3">
+            <figcaption>Fig1.10.- <a href="https://www.playstation.com/ps3-openplatform/" target="_blank">Play Station 3</a>  </figcaption>
+            </figure>                      
+          </section>
+
+        </section>
+
+        <section>
+          <h2>Linux Sucks 2016 <br>
+by <a href="http://lunduke.com/">Byran Lunduke</a></h2>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/WipM3SAYqK4?rel=0" frameborder="0" allowfullscreen></iframe>
+            <h3>Tarea 2: Sacar 15 ideas del video</h3>
+        
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+  // Optional reveal.js plugins
+  dependencies: [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true },
+  { src: 'plugin/notes/notes.js', async: true }
+  ]
+});
+
+    </script>
+
+  </body>
+</html>
