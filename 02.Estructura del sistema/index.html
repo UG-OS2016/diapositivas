@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Introducción</title>
+
+    <meta name="description" content="Introducción a los sistemas unixº">
+    <meta name="author" content="JuanCrg90">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Estructura del sistema operativo</h1>
+          <p>
+          <small>By <a href="http://juancrg90.me">Juan Carlos Ruiz</a> / <a href="http://twitter.com/JuanCrg90">@JuanCrg90</a></small>
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Esquema genérico de linux</h2>
+          </section>
+
+          <section>
+            <figure>
+              <img src="images/estructura.png" alt="">
+              <figcaption>Fig2.1 Esquema Genérico de Linux</figcaption>
+            </figure>
+          </section>
+
+          <section>
+            <figure>
+              <img src="images/linux-arch.png" alt="">
+              <figcaption>Fig2.2 Esquema Genérico de Linux</figcaption>
+            </figure>
+          </section>
+
+          <section>
+            <figure>
+              <img src="images/Arquitectura_linux.png" alt="">
+              <figcaption>Fig2.3 Esquema Genérico de Linux</figcaption>
+            </figure>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>Hardware</h2>
+            <p>Lo constituyen los componentes físicos del sistema.</p>
+            <p><i>"Aquello que se puede golpear."</i></p>
+          </section>
+
+          <section>
+            <figure>
+              <img src="images/Imagen-animada-Linux-14.gif" alt="">
+              <figcaption>Fig2.4 Tux</figcaption>
+            </figure>
+
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>Kernel</h2>
+          </section>
+
+          <section>
+            <p>Se puede definir como el corazón del sistema operativo. Es el encargado de que el software y el hardware del equipo trabajen juntos.</p>
+          </section>
+
+
+          <section>
+            <h3>Las funciones más importantes de este aunque no las únicas, son:</h3>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Administración de la memoria para todos los programas y procesos en ejecución.</li>
+              <li class="fragment">Administración del tiempo de procesador que los programas y procesos en ejecución utilizan.</li>
+              <li class="fragment">Es el encargado de que podamos acceder a los periféricos/elementos de nuestro ordenador de una manera cómoda.</li>
+            </ul>
+          </section>
+
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>Biblioteca estándar de procedimientos</h2>
+          </section>
+
+          <section>
+            <p>Son un conjunto de implementaciones funcionales las cuales se encargan de permitir al usuario comunicar el software con el kernel, La mayoría de los sistemas operativos Linux, poseen la biblioteca llamada libc. </p>
+          </section>
+
+          <section>
+            <p>Por ejemplo, las llamadas al kernel para abrir un archivo, para lectura o escritura, o mostrar texto en pantalla, o leer valores desde el teclado.</p>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>Aplicaciones</h2>
+          </section>
+
+          <section>
+              <p>Son las herramientas que permiten al usuario realizar diversos trabajos ya sea directa o indirectamente.</p>
+            </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Shell</h2>
+          </section>
+
+          <section>
+            <p>Es aquel que permite una interacción entre el usuario y el sistema operativo.</p>
+          </section>
+
+          <section>
+            <h3>Shell CLI</h3>
+          </section>
+
+          <section>
+            <figure>
+              <img src="images/CLI.png" alt="">
+              <figcaption>Fig2.5 Command Line Interface.</figcaption>
+            </figure>
+          </section>
+
+          <section>
+            <figure>
+              <img src="images/VShells.png" alt="">
+              <figcaption>Fig2.6 Shells gráficos.</figcaption>
+            </figure>
+          </section>
+
+          <section>
+            <figure>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/xC39pxgQOr8?rel=0" frameborder="0" allowfullscreen></iframe>
+              <figcaption>Fig2.7 Demo.</figcaption>
+            </figure>
+          </section>
+        
+        </section>
+
+        <section>
+          <h2>Documental "The Code"</h2>
+            <figure>
+              <iframe width="420" height="315" src="https://www.youtube.com/embed/XMm0HsmOTFI?rel=0" frameborder="0" allowfullscreen></iframe>
+              <figcaption>TAREA 3: SACAR 15 IDEAS DEL VIDEO</figcaption>
+            </figure>
+          </section>
+
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+  // Optional reveal.js plugins
+  dependencies: [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true },
+  { src: 'plugin/notes/notes.js', async: true }
+  ]
+});
+
+    </script>
+
+  </body>
+</html>
