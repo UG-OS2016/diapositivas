@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Estructura del sistema de archivos</title>
+
+    <meta name="description" content="Estructura del sistema de archivos">
+    <meta name="author" content="JuanCrg90">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Estructura del sistema de archivos</h1>
+          <p>
+          <small>By <a href="http://juancrg90.me">Juan Carlos Ruiz</a> / <a href="http://twitter.com/JuanCrg90">@JuanCrg90</a></small>
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>¿Dónde está archivos de programa?</h2>
+          </section>
+          <section>
+            <p>La estructura de archivos del sistema Linux es muy diferente a la del sistema operativo de microsoft, por lo que en este apartado veremos la composición de directorios de este.</p>
+          </section>
+        </section>
+
+        <section><img src="images/image1.jpg" alt=""></section>
+        <section><img src="images/image2.jpg" alt=""></section>
+
+        <section>
+          <section>
+            <h2>Conceptos</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Kernel: Es el centro de los sistemas Linux. Asigna recursos y controla procesos.</li>
+              <li class="fragment">Shell: Es la utilería que procesa las solicitudes de los usuarios, normalmente una terminal. Existen varios.</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Llamadas a Sistema: Función implementada en el kernel y su resultado pasa los argumentos de esa función a la rutina del kernel.</li>
+              <li class="fragment">Sistema de Archivos: Es una estructura ordenada que permite almacenar datos en un dispositivo.</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">C: Lenguaje de Programación en el cual está escrito el kernel de Linux.</li>
+              <li class="fragment">Proceso: Actividad dentro del sistema operativo. Existen procesos padre y procesos hijo.</li>
+              <li class="fragment">Control de Trabajos: Permite crear grupos de procesos en primer plano o secundarios.</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Archivo: Colección de datos almacenados en un dispositivo.</li>
+              <li class="fragment">i-nodo: Estructura de datos que contiene la información esencial de un archivo.</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Archivos</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Ordinario: Los que contienen datos.</li>
+              <li class="fragment">Enlace: Vínculo hacia otro archivo.</li>
+              <li class="fragment">Directorio: Contiene información acerca de un conjunto de archivos.</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Dispositivo por Bloques: Transfiere datos en lotes de caracteres (unidades de cinta, discos); empleados para almacenar información.</li>
+              <li class="fragment">Dispositivo por Caracteres: Transfiere datos caracter por caracter (teclado, impresora).</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Caracteres Especiales</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">& - Ejecuta procesos en segundo plano.</li>
+              <li class="fragment">; - Separa comandos en una sola línea.</li>
+              <li class="fragment">| - Concatena comandos.</li>
+              <li class="fragment">* - Sustituye caracteres</li>
+              <li class="fragment">? – Sustituye un carácter</li>
+            </ul>
+          
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">\ - Inhabilita la función del siguiente carácter especial.</li>
+              <li class="fragment">&lt; - Redireccionamiento de entrada.</li>
+              <li class="fragment">&gt; - Redireccionamiento de salida.</li>
+              <li class="fragment">&gt;&gt; - Añadir a un archivo.</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Particiones</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Dividir el disco en partes.</li>
+              <li class="fragment">Pista de inicio y pista final.</li>
+              <li class="fragment">El MBR guarda información de las particiones.</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">El MBR apunta a la partición activa y la máquina comienza a cargar el sistema operativo.</li>
+              <li class="fragment">El MBR es susceptible a ataques de virus informáticos.</li>
+            </ul>
+          </section>
+
+          <section><img src="images/particiones.png" alt=""></section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Ventajas</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Degradación del sistema operativo con el tiempo.</li>
+              <li class="fragment">En caso de daño, se amplían las posibilidades de recuperar datos.</li>
+              <li class="fragment">Separación del SO de los archivos de trabajo.</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Copias de seguridad separadas.</li>
+              <li class="fragment">Organización del disco y el acceso a los datos es eficiente.</li>
+              <li class="fragment">Linux utiliza al menos dos particiones.</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Clases de particiones</h2>
+          </section>
+
+          <section>
+            <p>Primaria: Es una única unidad lógica para la computadora. Puede ser reconocida como una partición de arranque y contener un SO para arrancar.</p>
+          </section>
+
+          <section>
+            <p>Extendida: Se inventó para romper la limitación de 4 particiones primarias en un disco. No puede ser utilizada como una unidad de arranque.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Tarea 5</h2>
+            <ol>
+              <li>Investigar las características de las particiones
+                <ul>
+                  <li>NTFS</li>
+                  <li>FAT (32, 64)</li>
+                  <li>EXT (2, 3, 4)</li>
+                </ul>
+              </li>
+              <li>Investigar que es fragmentación de disco.</li>
+            </ol>
+          </section>
+        </section>
+        
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+  // Optional reveal.js plugins
+  dependencies: [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true },
+  { src: 'plugin/notes/notes.js', async: true }
+  ]
+});
+
+    </script>
+
+  </body>
+</html>
