@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Introducción</title>
+
+    <meta name="description" content="Manejo de paquetes">
+    <meta name="author" content="JuanCrg90">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Paquetes en Linux</h1>
+          <p>
+          <small>By <a href="http://juancrg90.me">Juan Carlos Ruiz</a> / <a href="http://twitter.com/JuanCrg90">@JuanCrg90</a></small>
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>¿Qué es un paquete?</h2>
+          </section>
+
+          <section>
+            <img src="/images/paquete.png" alt="Paquete" style="border: none; box-shadow: none;">
+            <p>Un paquete es un programa/software empaquetado para su instalación.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>deb y dpkg</h2>
+          </section>
+
+          <section>
+            <img src="/images/debian.png" alt="Debian" style="border: none; box-shadow: none;">
+            <p>Es el tipo de paquete que utilizan los sistemas debian (y basados en este).
+            El comando dpkg es el encargado de gestionar dichos paquetes.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>rpm</h2>
+          </section>
+
+          <section>
+            <img src="/images/redHat.png" alt="Red Hat" style="border: none; box-shadow: none;">
+            <p>(Red Hat Package Manager) es el tipo de paquete utilizado para distribuciones basadas en redhat. El manejador de paquetes recibe el mismo nombre.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>
+              ¿Qué es una dependencia?
+            </h2>
+          </section>
+
+          <section>
+            <p>Una dependencia es un paquete accesorio requerido por un paquete instalador para hacer funcionar correctamente un programa después de instalarlo. Generalmente son bibliotecas de código o programas accesorios. Un programa puede tener múltiples dependencias, las cuales no siempre vienen instaladas en la distribución Linux elegida por diversas razones, por no ser necesarias, por aumentar demasiado el tamaño del archivo ISO, etc.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>¿Qué es un repositorio?</h2>
+          </section>
+
+          <section>
+            <img src="/images/repo.png" alt="repositorio" style="border: none; box-shadow: none;">
+            <p>
+            Un repositorio de GNU/Linux es una colección de paquetes de programas de una distribución de Linux específica que generalmente contiene archivos binarios precompilados que pueden ser descargados e instalados por los usuarios de la distribución correspondiente. Es posible también encontrar paquetes de código fuente.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>apt-get</h2>
+          </section>
+
+          <section>
+            <img src="/images/debian.png" alt="Debian" style="border: none; box-shadow: none;">
+            <p>apt-get es la herramienta que utiliza Debian y sus derivadas, para gestionar los paquetes disponibles en los repositorios.</p>
+          </section>
+
+          <section>
+            <img src="/images/apt.png" alt="apt-comic" style="border: none; box-shadow: none; height: 350px;">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>aptitude</h2>
+          </section>
+
+          <section>
+            <p>Se dice que Aptitude es una versión mejorada de Apt y gestiona mucho mejor las dependencias de los paquetes y que incluso, es recomendado por Debian. Aptitude incluye muchas más opciones que Apt.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Saber si un paquete se encuentra disponible en los repositorios</h2>
+          </section>
+          <section>
+            <ul>
+            <li>Fedora: yum/dnf search paquete</li>
+            <li>Debian/Ubuntu: apt-cache search paquete</li>
+            <li>Arch Linux: pacman -Ss paquete</li>
+            <li>OpenSUSE: zypper se paquete</li>
+            <li>Gentoo: emerge -S paquete</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Saber si un paquete se encuentra instalado en nuestra máquina</h2>
+          </section>
+
+          <section>
+
+            <ul>
+              <li>Fedora: rpm -qa | grep paquete</li>
+              <li>Debian/Ubuntu: dpkg -l | grep paquete </li>
+              <li>Debian/Ubuntu: dpkg --get-selections</li>
+              <li>Arch Linux: pacman -Qs paquete</li>
+              <li>OpenSUSE: zypper se -i paquete</li>
+              <li>Gentoo: emerge -pv paquete</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>Tarea</h2>
+          <p>Investigar cómo agregar repositorios en debian (basados) y en fedora.</p>
+        </section>
+        
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+  // Optional reveal.js plugins
+  dependencies: [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true },
+  { src: 'plugin/notes/notes.js', async: true }
+  ]
+});
+
+    </script>
+
+  </body>
+</html>
